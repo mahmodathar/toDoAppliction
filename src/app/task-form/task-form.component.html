@@ -1,3 +1,14 @@
-<input type="text" placeholder="Create Same Task..." class="form-control" name="newTask" id="newTask" [(ngModel)]="newTask">
-<br>
-<button class="btn btn-success" type="submit" (click)="addTask()">Add Task</button> 
+<form #t="ngForm">
+    <input 
+        type="text" 
+        required
+        ngModel
+        name="newTask" 
+        #task="ngModel"
+        placeholder="Create Same Task.." 
+        class="form-control" 
+        [(ngModel)]="newTask"
+    >
+   <!-- <div class="alert alert-danger" *ngIf="task.touched && !task.valid">*Required Filed add some</div>-->
+    <button class="btn btn-success button" type="submit" (click)="addTask()" [disabled]="!t.valid">Add Task</button> 
+</form>

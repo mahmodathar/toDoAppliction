@@ -1,9 +1,23 @@
-
 <ul>
-    <li class="input alert alert-success"><input *ngIf="tasks.length" type="text" placeholder="Seaarch Tasks.." class="form-control" name="searchTask" id="searchTask" [(ngModel)]="searchText">
+    <li class="input alert alert-success">
+      <input 
+        *ngIf="tasks.length && tasks.length" 
+        type="text" 
+        placeholder="Seaarch Tasks.." 
+        class="form-control" 
+        name="searchTask" 
+        id="searchTask" 
+        [(ngModel)]="searchText"
+      />
+      
     </li>
-    <li class="d-flex my-2" *ngFor="let task of tasks | filterPipe: searchText; let i = index;">
+    
+    
+    <li class="d-flex my-2" 
+        *ngFor="let task of tasks | filterPipe: searchText; let i = index;"
+        >
         {{ task }}
       <button class="btn btn-outline-danger" (click)="removeTask()">Delete</button>
     </li>
-</ul>
+
+  </ul>

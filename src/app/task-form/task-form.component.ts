@@ -13,7 +13,7 @@ newTask: string;
 
   ngOnInit(): void {
   }
-
+  
   addTask(){
     this.taskList.unshift(this.newTask);
     localStorage.setItem('my_tasks', JSON.stringify(this.taskList))

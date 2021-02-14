@@ -1,24 +1,22 @@
+<app-header></app-header>
 <div class="container">
   <div class="card-row">
-
-    <div class="card-header bg-warning text-white">
-      <h1>{{ title }}</h1>
-    </div>
 
     <div class="card-body">
       <!-- Task From -->
       <app-task-form [taskList]="taskList"></app-task-form>
     </div>
 
-    <div class="card-body">
+    <div class="card-body tasksList">
       <h2 *ngIf="taskList.length" class="bg-light text-center py-3">My Current Tasks ({{taskList.length}})</h2>
       <h2 *ngIf="!taskList.length"class="bg-light text-center py-3">No task available, Create one..</h2>
       <app-task-list [tasks]="taskList"></app-task-list>
     </div>
 
-    <footer class="bg-dark text-white">
-      <div class="footer">
-        Copyright © ToDoList Appliction 2021 ® Md. Athar
-      </div>
-    </footer>
+  </div>
+
 </div>
+
+<footer> 
+  <app-footer></app-footer>
+</footer>

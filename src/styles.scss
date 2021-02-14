@@ -1,17 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+ul{
+    padding-left: 0;
 
-li{
-    justify-content: space-between;
-    border: 1px solid rgb(221, 220, 220);
-    padding:15px;
-    border-radius: 10px;
-    align-items: center;
-    list-style-type: none;
+    li{
+        justify-content: space-between;
+        border: 1px solid rgb(221, 220, 220);
+        padding:15px;
+        border-radius: 10px;
+        align-items: center;
+        list-style-type: none;
+    }
 }
-.card-body h2{
-    margin-left: 40px;
+
+.button{
+    margin: 10px 0;
+}
+
+@media only screen and (max-width: 768px) {    
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 26px;
+    }
 }
 footer{
     text-align: center;
-    padding: 10px 0;
+    position: absolute;
+    width: 100%;
+    
+    div{
+        padding:25px 0;
+    } 
+
+    @media only screen and (max-width: 768px) {      
+        footer{
+            font-size: 12px;
+        }     
+    }
 }
